@@ -7,9 +7,15 @@
 
 import Foundation
 
+protocol loginProtocol {
+    func onSusses()
+    func onError()
+}
+
 class Router {
     var urlString = ""
     var body: String?
+    var manager: loginProtocol?
     
     func configuration() {
         
