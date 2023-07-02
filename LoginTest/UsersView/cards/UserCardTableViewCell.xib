@@ -44,19 +44,34 @@
                         <color key="textColor" name="blackLetters"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXG-IK-vy3">
+                        <rect key="frame" x="0.0" y="0.0" width="498" height="160"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="794-d2-pj0" firstAttribute="top" secondItem="jeo-oO-785" secondAttribute="bottom" constant="25" id="1iw-nI-YS6"/>
                     <constraint firstItem="jeo-oO-785" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="4AI-Z8-Xl6"/>
                     <constraint firstItem="ny3-eE-vKa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6jV-9u-Kyq"/>
+                    <constraint firstAttribute="trailing" secondItem="dXG-IK-vy3" secondAttribute="trailing" constant="9" id="9kD-Wm-Xjg"/>
                     <constraint firstItem="kqK-xK-22P" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PPS-FX-Zhp"/>
                     <constraint firstItem="jeo-oO-785" firstAttribute="leading" secondItem="kqK-xK-22P" secondAttribute="trailing" constant="30" id="Xi8-sP-uu8"/>
                     <constraint firstAttribute="trailing" secondItem="ny3-eE-vKa" secondAttribute="trailing" constant="16" id="hZa-ME-oNt"/>
+                    <constraint firstAttribute="bottom" secondItem="dXG-IK-vy3" secondAttribute="bottom" id="hhy-aj-llM"/>
                     <constraint firstItem="kqK-xK-22P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="iE0-cA-uen"/>
+                    <constraint firstItem="dXG-IK-vy3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pHO-qq-raB"/>
                     <constraint firstItem="794-d2-pj0" firstAttribute="leading" secondItem="kqK-xK-22P" secondAttribute="trailing" constant="30" id="yiZ-Ai-jc5"/>
+                    <constraint firstItem="dXG-IK-vy3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ypr-2k-PTp"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarUser" destination="kqK-xK-22P" id="DYw-1r-jp5"/>
+                <outlet property="emailUserLabel" destination="794-d2-pj0" id="iaR-ev-coU"/>
+                <outlet property="userFullNameLabel" destination="jeo-oO-785" id="Ldq-3J-wLa"/>
+                <outlet property="userInfoLaunchButton" destination="dXG-IK-vy3" id="DQJ-gm-E3q"/>
+            </connections>
             <point key="canvasLocation" x="281.67938931297709" y="60.563380281690144"/>
         </tableViewCell>
     </objects>

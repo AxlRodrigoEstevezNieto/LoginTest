@@ -8,11 +8,11 @@
 import Foundation
 
 struct resultsStruct: Decodable {
-    var results: [usuario] = []
+    var results: [usuario]!
 }
 
 struct usuario: Decodable {
-    var gener: String!
+    var gender: String!
     var name: usuarioNombre!
     var location: locationUser!
     var email: String!
@@ -37,7 +37,7 @@ struct locationUser: Decodable {
     var city: String!
     var state: String!
     var country: String!
-    var postcode: String!
+    var postcode: Int!
     var coordinates: coordinatesStruct!
     var timeZone: timezoneStruct!
 }

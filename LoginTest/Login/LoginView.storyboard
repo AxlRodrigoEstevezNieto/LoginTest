@@ -25,7 +25,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ZLQ-ox-reT" secondAttribute="bottom" id="6eq-pJ-St9"/>
                                     <constraint firstItem="ZLQ-ox-reT" firstAttribute="leading" secondItem="gGN-O5-GDp" secondAttribute="leading" id="KJ8-ak-7MI"/>
@@ -105,15 +104,20 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="reA-nJ-a56" userLabel="buttonLogin">
                                                 <rect key="frame" x="0.0" y="138.66666666666669" width="393" height="61.333333333333343"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lq9-6K-afZ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lq9-6K-afZ" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
                                                         <rect key="frame" x="16" y="16.000000000000004" width="361" height="45.333333333333343"/>
                                                         <color key="backgroundColor" name="blue-high"/>
                                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Iniciar sesión"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="setRippleEffect" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="loginAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dJY-MG-s8R"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="Lq9-6K-afZ" secondAttribute="bottom" id="AJF-oh-AT1"/>
                                                     <constraint firstItem="Lq9-6K-afZ" firstAttribute="top" secondItem="reA-nJ-a56" secondAttribute="top" constant="16" id="eFD-VR-5bh"/>
@@ -128,7 +132,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="hyW-So-8Kz" secondAttribute="bottom" id="6a3-Fc-q8z"/>
                                     <constraint firstAttribute="height" constant="200" id="LbZ-6v-wcn"/>
@@ -139,7 +142,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="JKJ-nI-reK" firstAttribute="top" secondItem="gGN-O5-GDp" secondAttribute="bottom" constant="16" id="LOR-Sj-LsQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gGN-O5-GDp" secondAttribute="trailing" id="Vkm-KX-Fv4"/>
@@ -150,7 +153,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="Lq9-6K-afZ" id="Ieg-TH-dV2"/>
+                        <outlet property="loginButton" destination="Lq9-6K-afZ" id="sSS-5f-tNB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -168,6 +171,9 @@
     </designables>
     <resources>
         <image name="Icon-login" width="512" height="512"/>
+        <namedColor name="background">
+            <color red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="blackLetters">
             <color red="0.14509803921568629" green="0.14117647058823529" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -180,9 +186,6 @@
         <namedColor name="bordersColorInactive">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
