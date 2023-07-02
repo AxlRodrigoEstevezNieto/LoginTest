@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import Kingfisher
 
-class UserCardTableViewCell: UITableViewCell {
-    
+protocol sendUserFromCellProtocol {
+    func sendInfoUser(user: usuario)
+}
+
+class UserCellTableViewCell: UITableViewCell {
     
     @IBOutlet weak var userInfoLaunchButton: UIButton!
     @IBOutlet weak var avatarUser: UIImageView!
@@ -25,9 +29,11 @@ class UserCardTableViewCell: UITableViewCell {
     }
     
     func setData(user: usuario) {
+        self.usuarioObj = user
         makeFullName(nameUser: user.name)
+        setupImage(urlString: user.picture.thumbnail)
         userFullNameLabel.text = userFullName
-        emailUserLabel.text = usuarioObj.email
+        emailUserLabel.text = user.email!
     }
     
     func setupCell() { 
@@ -40,5 +46,12 @@ class UserCardTableViewCell: UITableViewCell {
         let last = nameUser.last
         userFullName = "\(name!) \(fisrtName!) \(last!)"
     }
+    
+    func setupImage(urlString: String) {
+        let url = URL(string: urlString)
+        avatarUser.kf.setImage(with: url)
+    }
+    
+    
     
 }
