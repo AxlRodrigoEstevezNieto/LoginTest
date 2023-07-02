@@ -87,3 +87,9 @@ struct locationUserStreet: Decodable {
     var number: Int!
     var name: String!
 }
+
+struct KeyAccessUser {
+    var email: String?
+    var userName: String?
+    var password: String?
+}

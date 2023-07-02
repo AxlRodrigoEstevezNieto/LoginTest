@@ -10,11 +10,11 @@ import UIKit
 extension LoginViewController: loginProtocol {
     
     func onSusses(response: resultsStruct) {
-        print(response.results!)
-        
         DispatchQueue.main.async {
             self.loginButton.stopAnimatingWithCompletionType(completionType: .success, complete: {
-                print("Se cumplio")
+                let viewController = UsersViewController(users: response.results)
+                viewController.modalPresentationStyle = .overFullScreen
+                self.present(viewController, animated: true)
             })
         }
     }
@@ -24,6 +24,15 @@ extension LoginViewController: loginProtocol {
         DispatchQueue.main.async {
             self.loginButton.stopAnimatingWithCompletionType(completionType: .error, complete: {
                 self.makeAlert(error: error, type: "error")
+            })
+        }
+    }
+    
+    func loginError(error: String) {
+        
+        DispatchQueue.main.async {
+            self.loginButton.stopAnimatingWithCompletionType(completionType: .error, complete: {
+                self.makeAlert(error: error, type: "Error")
             })
         }
     }

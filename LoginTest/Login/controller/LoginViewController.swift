@@ -7,13 +7,18 @@
 
 import UIKit
 import SSSpinnerButton
+import TextFieldEffects
 
 class LoginViewController: UIViewController {
     
     
+    @IBOutlet weak var userNameEmailLabel: HoshiTextField!
+    @IBOutlet weak var passwordLabel: HoshiTextField!
     @IBOutlet weak var loginButton: SSSpinnerButton!
     
+    
     private let model = LoginRouter()
+    private var userLogin = KeyAccessUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +28,11 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginAction(_ sender: Any) {
+        userLogin.email = userNameEmailLabel.text
+        userLogin.userName = userNameEmailLabel.text
+        userLogin.password = passwordLabel.text
         loginButton.startAnimate(spinnerType: .ballClipRotate, spinnercolor: .white, spinnerSize: 25, complete: {
-            self.model.getUsers()
+            self.model.evalAccessKey(accessKey: self.userLogin)
         })
     }
     

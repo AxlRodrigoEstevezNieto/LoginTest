@@ -17,13 +17,13 @@
 		4590F9852A4E19ED009A7CA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4590F9832A4E19ED009A7CA0 /* LaunchScreen.storyboard */; };
 		4590F98F2A4E1A9C009A7CA0 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4590F98E2A4E1A9C009A7CA0 /* LoginView.storyboard */; };
 		459F9DDF2A4F63DD00615766 /* UsuarioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F9DDE2A4F63DD00615766 /* UsuarioModel.swift */; };
+		EF2B08F92A51F1FF00263495 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B08F72A51F1FF00263495 /* UsersViewController.swift */; };
+		EF2B08FA2A51F1FF00263495 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF2B08F82A51F1FF00263495 /* UsersViewController.xib */; };
 		EF2F5ADF2A50AC8000FC6288 /* UserCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2F5ADD2A50AC8000FC6288 /* UserCardTableViewCell.swift */; };
 		EF2F5AE02A50AC8000FC6288 /* UserCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF2F5ADE2A50AC8000FC6288 /* UserCardTableViewCell.xib */; };
-		EF2F5AE22A50AE9A00FC6288 /* UsersTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF2F5AE12A50AE9A00FC6288 /* UsersTableView.storyboard */; };
-		EF2F5AE42A50AEB700FC6288 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2F5AE32A50AEB700FC6288 /* UsersTableViewController.swift */; };
 		EF4BC34E2A50A12D00057218 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BC34D2A50A12D00057218 /* LoginViewController.swift */; };
 		EF62D8152A50960200109F40 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62D8142A50960200109F40 /* LoginRouter.swift */; };
-		EF6BEABF2A50B006008DCFC9 /* UsersTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6BEABE2A50B006008DCFC9 /* UsersTableViewControllerDelegate.swift */; };
+		EF6BEABF2A50B006008DCFC9 /* UsersViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6BEABE2A50B006008DCFC9 /* UsersViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,13 +40,13 @@
 		459F9DDE2A4F63DD00615766 /* UsuarioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioModel.swift; sourceTree = "<group>"; };
 		914AC965BE48C18ACEE46102 /* Pods_LoginTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16F53610587ED3FAA9E2D96 /* Pods-LoginTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTest.release.xcconfig"; path = "Target Support Files/Pods-LoginTest/Pods-LoginTest.release.xcconfig"; sourceTree = "<group>"; };
+		EF2B08F72A51F1FF00263495 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		EF2B08F82A51F1FF00263495 /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
 		EF2F5ADD2A50AC8000FC6288 /* UserCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardTableViewCell.swift; sourceTree = "<group>"; };
 		EF2F5ADE2A50AC8000FC6288 /* UserCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCardTableViewCell.xib; sourceTree = "<group>"; };
-		EF2F5AE12A50AE9A00FC6288 /* UsersTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsersTableView.storyboard; sourceTree = "<group>"; };
-		EF2F5AE32A50AEB700FC6288 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		EF4BC34D2A50A12D00057218 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EF62D8142A50960200109F40 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
-		EF6BEABE2A50B006008DCFC9 /* UsersTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewControllerDelegate.swift; sourceTree = "<group>"; };
+		EF6BEABE2A50B006008DCFC9 /* UsersViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerDelegate.swift; sourceTree = "<group>"; };
 		F4DA6BE23441AD0D25ADD06B /* Pods-LoginTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTest.debug.xcconfig"; path = "Target Support Files/Pods-LoginTest/Pods-LoginTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,9 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				EF2F5ADA2A50AC3600FC6288 /* cards */,
-				EF2F5AE12A50AE9A00FC6288 /* UsersTableView.storyboard */,
-				EF2F5AE32A50AEB700FC6288 /* UsersTableViewController.swift */,
-				EF6BEABE2A50B006008DCFC9 /* UsersTableViewControllerDelegate.swift */,
+				EF6BEABE2A50B006008DCFC9 /* UsersViewControllerDelegate.swift */,
+				EF2B08F72A51F1FF00263495 /* UsersViewController.swift */,
+				EF2B08F82A51F1FF00263495 /* UsersViewController.xib */,
 			);
 			path = UsersView;
 			sourceTree = "<group>";
@@ -229,10 +229,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF2B08FA2A51F1FF00263495 /* UsersViewController.xib in Resources */,
 				4590F9852A4E19ED009A7CA0 /* LaunchScreen.storyboard in Resources */,
 				EF2F5AE02A50AC8000FC6288 /* UserCardTableViewCell.xib in Resources */,
 				4590F9822A4E19ED009A7CA0 /* Assets.xcassets in Resources */,
-				EF2F5AE22A50AE9A00FC6288 /* UsersTableView.storyboard in Resources */,
 				4590F9802A4E19EC009A7CA0 /* Main.storyboard in Resources */,
 				4590F98F2A4E1A9C009A7CA0 /* LoginView.storyboard in Resources */,
 			);
@@ -287,11 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF6BEABF2A50B006008DCFC9 /* UsersTableViewControllerDelegate.swift in Sources */,
+				EF6BEABF2A50B006008DCFC9 /* UsersViewControllerDelegate.swift in Sources */,
 				4555B3472A5115F500FCA67F /* LoginViewControllerDelegate.swift in Sources */,
 				EF4BC34E2A50A12D00057218 /* LoginViewController.swift in Sources */,
+				EF2B08F92A51F1FF00263495 /* UsersViewController.swift in Sources */,
 				4590F97D2A4E19EC009A7CA0 /* ViewController.swift in Sources */,
-				EF2F5AE42A50AEB700FC6288 /* UsersTableViewController.swift in Sources */,
 				4590F9792A4E19EC009A7CA0 /* AppDelegate.swift in Sources */,
 				EF62D8152A50960200109F40 /* LoginRouter.swift in Sources */,
 				459F9DDF2A4F63DD00615766 /* UsuarioModel.swift in Sources */,

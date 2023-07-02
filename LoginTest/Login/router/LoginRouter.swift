@@ -10,12 +10,15 @@ import Foundation
 protocol loginProtocol {
     func onSusses(response: resultsStruct)
     func onError(error: String)
+    func loginError(error: String)
 }
 
 class LoginRouter {
-    var delegate: loginProtocol!
     
-    func getUsers() {
+    var delegate: loginProtocol!
+    var users: [usuario] = []
+    
+    func evalAccessKey(accessKey: KeyAccessUser) {
         let urlString = "https://randomuser.me/api?results=20&seed=smartstc&nat=ES"
         let url = URL(string: urlString)!
         
@@ -26,16 +29,33 @@ class LoginRouter {
             }
             
             if let data = data {
-                let str = String(decoding: data, as: UTF8.self)
-                print("Response: \(str)")
                 if let userList = try? JSONDecoder().decode(resultsStruct.self, from: data) {
-                    self.delegate?.onSusses(response: userList)
+                    self.users = userList.results!
+                    if self.isAccessKeys(accessKey: accessKey) {
+                        self.delegate?.onSusses(response: userList)
+                    } else {
+                        self.delegate?.loginError(error: "Error al ingresar. Revisa tus datos")
+                    }
                 } else {
-                    self.delegate.onError(error: "Ha ocurriodo un error decodificando datos")
+                    self.delegate.onError(error: "Ha ocurriodo un error interno. Intentalo más tarde")
                 }
             }
         }
         
         task.resume()
+    }
+    
+    func isAccessKeys(accessKey: KeyAccessUser) -> Bool{
+        var isOk = false
+        if users.count > 0 {
+            for user in users {
+                if (accessKey.email == user.email || accessKey.userName == user.login.username) && (accessKey.password == user.login.password) {
+                    isOk = true
+                    break
+                }
+            }
+        }
+        
+        return isOk
     }
 }

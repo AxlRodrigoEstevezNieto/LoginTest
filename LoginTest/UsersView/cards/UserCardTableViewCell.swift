@@ -21,7 +21,7 @@ class UserCardTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupCell()
     }
     
     func setData(user: usuario) {
