@@ -7,6 +7,7 @@ target 'LoginTest' do
   pod 'TextFieldEffects'
   pod 'IQKeyboardManagerSwift'
   pod 'SSSpinnerButton'
+  pod 'Kingfisher', '~> 7.0'
   # Pods for LoginTest
 
 end

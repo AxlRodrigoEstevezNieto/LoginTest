@@ -19,7 +19,7 @@ class UserCellTableViewCell: UITableViewCell {
     @IBOutlet weak var userFullNameLabel: UILabel!
     @IBOutlet weak var emailUserLabel: UILabel!
     
-    
+    var delegate: sendUserFromCellProtocol?
     var usuarioObj: usuario!
     var userFullName: String = ""
 
@@ -52,6 +52,10 @@ class UserCellTableViewCell: UITableViewCell {
         avatarUser.kf.setImage(with: url)
     }
     
+    @IBAction func launchInfoView(_ sender: Any) {
+        print("🖨️ Usuario seleccionado")
+        self.delegate?.sendInfoUser(user: usuarioObj)
+    }
     
     
 }

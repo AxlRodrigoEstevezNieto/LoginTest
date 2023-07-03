@@ -30,8 +30,8 @@ class UsersViewController: UIViewController {
     }
     
     func configureTableView() {
-        let nibName = UINib(nibName: "\(UserCardTableViewCell.self)", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "\(UserCardTableViewCell.self)")
+        let nibName = UINib(nibName: "\(UserCellTableViewCell.self)", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "\(UserCellTableViewCell.self)")
         tableView.rowHeight = 106
         tableView.reloadData()
     }
