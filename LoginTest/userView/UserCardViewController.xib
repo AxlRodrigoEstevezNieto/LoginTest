@@ -57,7 +57,7 @@
                     <rect key="frame" x="0.0" y="124" width="393" height="694"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bWG-NH-3Oi">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="230"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="350"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONm-2h-pPU" userLabel="headerProfile">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="230"/>
@@ -91,6 +91,36 @@
                                         <constraint firstItem="aoi-cI-ajf" firstAttribute="top" secondItem="alg-96-VY7" secondAttribute="bottom" constant="10" id="dD3-U8-5UU"/>
                                         <constraint firstItem="zAA-u2-Kyx" firstAttribute="centerX" secondItem="ONm-2h-pPU" secondAttribute="centerX" id="mI3-nJ-iV3"/>
                                         <constraint firstAttribute="height" constant="230" id="vLV-8M-yaf"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOD-g6-T9d">
+                                    <rect key="frame" x="0.0" y="230" width="393" height="120"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="P7k-mb-nLz">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="120"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzz-QI-vmp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="120"/>
+                                                    <color key="backgroundColor" name="background"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mta-R7-N6h">
+                                                    <rect key="frame" x="133.66666666666666" y="0.0" width="125.66666666666666" height="120"/>
+                                                    <color key="backgroundColor" name="background"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWZ-QQ-0xN">
+                                                    <rect key="frame" x="267.33333333333331" y="0.0" width="125.66666666666669" height="120"/>
+                                                    <color key="backgroundColor" name="background"/>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="background"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="P7k-mb-nLz" secondAttribute="trailing" id="1mO-Tz-eZp"/>
+                                        <constraint firstItem="P7k-mb-nLz" firstAttribute="leading" secondItem="rOD-g6-T9d" secondAttribute="leading" id="2t3-2R-pbG"/>
+                                        <constraint firstItem="P7k-mb-nLz" firstAttribute="top" secondItem="rOD-g6-T9d" secondAttribute="top" id="C76-BM-jYR"/>
+                                        <constraint firstAttribute="bottom" secondItem="P7k-mb-nLz" secondAttribute="bottom" id="KnF-80-Yvh"/>
+                                        <constraint firstAttribute="height" constant="120" id="cJk-Jf-kdd"/>
                                     </constraints>
                                 </view>
                             </subviews>
