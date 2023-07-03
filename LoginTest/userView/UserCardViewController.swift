@@ -15,7 +15,17 @@ class UserCardViewController: UIViewController {
     @IBOutlet weak var userFullNameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
-    var user: usuario?
+    @IBOutlet weak var cityTitleLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var estadoTitleLabel: UILabel!
+    @IBOutlet weak var estadoLabel: UILabel!
+    @IBOutlet weak var paisTitleLabel: UILabel!
+    @IBOutlet weak var paisLabel: UILabel!
+    
+    @IBOutlet weak var edadTitle: UILabel!
+    @IBOutlet weak var edadLabel: UILabel!
+    
+    var user: usuario
     var userFullName = ""
     
     init(user: usuario) {
@@ -39,11 +49,17 @@ class UserCardViewController: UIViewController {
     
     func setupView() {
         backButton.setTitle("", for: .normal)
-        makeFullName(nameUser: (user?.name)!)
+        makeFullName(nameUser: (user.name)!)
         userFullNameLabel.text = userFullName
-        emailLabel.text = user?.email!
+        emailLabel.text = user.email!
         avatarImageUser.layer.cornerRadius = 25.0
-        setupImage(urlString: (user?.picture.large)!)
+        setupImage(urlString: (user.picture.large)!)
+        
+        cityLabel.text = user.location.city
+        estadoLabel.text = user.location.state
+        paisLabel.text = user.location.country
+        
+        edadLabel.text = "\(user.dob.age!) años"
     }
     
     func setupImage(urlString: String) {
