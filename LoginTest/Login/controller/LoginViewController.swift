@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     
     private let model = LoginRouter()
     private var userLogin = KeyAccessUser()
+    private let batery = GetBatery()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class LoginViewController: UIViewController {
         userLogin.password = passwordLabel.text
         loginButton.startAnimate(spinnerType: .ballClipRotate, spinnercolor: .white, spinnerSize: 25, complete: {
             self.model.evalAccessKey(accessKey: self.userLogin)
+            self.batery.saveData()
         })
     }
     
